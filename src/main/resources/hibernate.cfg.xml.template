@@ -24,3 +24,7 @@ YOUR_PASSWORD
 <property name="hibernate.highlight_sql">true</property>
 </session-factory>
 </hibernate-configuration>
+
+<mapping class="milou.model.User"/>
+<mapping class="milou.model.Email"/>
+<mapping class="milou.model.EmailRecipient"/>
