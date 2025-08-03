@@ -4,32 +4,32 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public class EmailRecipientId implements Serializable {
-    private Long email;
-    private Long recipient;
+    private Integer email;  // تغییر از Long به Integer
+    private Integer recipient;  // تغییر از Long به Integer
 
     // Constructors
     public EmailRecipientId() {
     }
 
-    public EmailRecipientId(Long email, Long recipient) {
+    public EmailRecipientId(Integer email, Integer recipient) {
         this.email = email;
         this.recipient = recipient;
     }
 
     // Getters and Setters
-    public Long getEmail() {
+    public Integer getEmail() {
         return email;
     }
 
-    public void setEmail(Long email) {
+    public void setEmail(Integer email) {
         this.email = email;
     }
 
-    public Long getRecipient() {
+    public Integer getRecipient() {
         return recipient;
     }
 
-    public void setRecipient(Long recipient) {
+    public void setRecipient(Integer recipient) {
         this.recipient = recipient;
     }
 
