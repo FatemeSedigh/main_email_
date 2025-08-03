@@ -1,4 +1,4 @@
-package milou;
+package milou.menu;
 
 import milou.model.Email;
 import milou.model.EmailRecipient;

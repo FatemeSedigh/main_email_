@@ -1,5 +1,9 @@
-package milou;
+package milou.first;
 
+import milou.menu.Forward;
+import milou.menu.Reply;
+import milou.menu.Send;
+import milou.menu.View;
 import milou.model.User;
 import java.util.Scanner;
 import org.hibernate.SessionFactory;

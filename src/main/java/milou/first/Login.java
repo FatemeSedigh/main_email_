@@ -1,4 +1,4 @@
-package milou;
+package milou.first;
 
 import milou.model.*;
 import org.hibernate.Session;

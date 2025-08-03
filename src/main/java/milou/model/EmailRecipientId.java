@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public class EmailRecipientId implements Serializable {
-    private Integer email;  // تغییر از Long به Integer
-    private Integer recipient;  // تغییر از Long به Integer
+    private Integer email;
+    private Integer recipient;
 
     // Constructors
     public EmailRecipientId() {

@@ -1,5 +1,9 @@
 package milou;
 
+import milou.first.Login;
+import milou.first.ShowMenu;
+import milou.first.ShowUnreadEmails;
+import milou.first.Signup;
 import milou.model.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -35,10 +39,8 @@ public class Main {
 
                     System.out.println("\nWelcome back, " + user.getName() + "!");
 
-                    // اصلاح شده: ایجاد شیء از کلاس ShowUnreadEmails و فراخوانی متد show
                     new ShowUnreadEmails(sessionFactory).show(user);
 
-                    // اصلاح شده: ایجاد شیء از کلاس ShowMenu و فراخوانی متد show
                     new ShowMenu(sessionFactory, user).show();
 
                 } else if (choice.equals("S") || choice.equals("SIGNUP")) {
@@ -62,7 +64,7 @@ public class Main {
                     System.out.println("Invalid choice. Please enter L for Login or S for Sign up.");
                 }
             } finally {
-                // هیچگاه sessionFactory را اینجا نبندید چون برنامه ادامه دارد
+                // هیچگاه sessionFactory را اینجا نمیبندیم چون برنامه ادامه دارد
             }
         }
     }
