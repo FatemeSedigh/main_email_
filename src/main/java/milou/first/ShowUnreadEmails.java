@@ -18,8 +18,13 @@ public class ShowUnreadEmails {
     public void show(User user) {
         try (Session session = sessionFactory.openSession()) {
             Query<EmailRecipient> query = session.createQuery(
-                    "FROM EmailRecipient WHERE recipient.id = :userId AND isRead = false ORDER BY email.sentDate DESC, email.sentTime DESC",
+                    "FROM EmailRecipient er " +
+                            "WHERE er.recipient.id = :userId " +
+                            "AND er.isRead = false " +
+                            "AND er.email.sender.id != :userId " + // این شرط جدید
+                            "ORDER BY er.email.sentDate DESC, er.email.sentTime DESC",
                     EmailRecipient.class);
+
             query.setParameter("userId", user.getId());
 
             List<EmailRecipient> unreadEmails = query.getResultList();
