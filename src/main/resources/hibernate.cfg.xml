@@ -6,7 +6,7 @@
     <session-factory>
         <!-- JDBC connection settings -->
         <property name="hibernate.connection.url">
-            jdbc:mysql://k2.liara.cloud:30055/main_email_?useSSL=false&amp;serverTimezone=UTC
+            jdbc:mysql://k2.liara.cloud:30055/main_email_?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true
         </property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">jnmeyDzSxK9IyrbU9KaysoCY</property>
@@ -19,7 +19,7 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
         <!-- Echo all executed SQL to stdout -->
-        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.show_sql">false</property>
         <property name="hibernate.format_sql">true</property>
         <property name="hibernate.highlight_sql">true</property>
 
